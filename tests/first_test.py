@@ -14,3 +14,4 @@ def test_login_with_invalid_creds(page:  Page):
 
     expect(page.locator("#content-desktop").get_by_text("Invalid Email or password.")).to_be_visible()
     expect(page.locator("#content-desktop .common-flash-info")).to_have_text("Invalid Email or password.")
+    expect(page.locator("#content-desktop").get_by_text("Forgot your password?")).to_be_enabled()
