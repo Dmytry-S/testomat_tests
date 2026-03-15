@@ -78,4 +78,3 @@ def search_for_project(page: Page, target_project: str):
 def select_free_project(page: Page):
     page.locator("#company_id").click()
     page.locator("#company_id").select_option("Free Projects")
-
