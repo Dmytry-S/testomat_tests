@@ -33,7 +33,6 @@ def test_signup_with_invalid_creds(page: Page, configs: Config):
     expect(page.locator("#content-desktop .text-red-500")).to_have_text(re.compile("^ must contain special"))
 
 def test_search_project_in_company(page: Page, login):
-
     search_for_project(page, os.getenv('TARGET_PROJECT'))
 
     expect(page.get_by_role("heading", name=os.getenv('TARGET_PROJECT'))).to_be_visible()
@@ -52,7 +51,6 @@ def test_link_read_docs_is_enabled(page: Page, login):
     select_free_project(page)
 
     expect(page.locator("[href='https://docs.testomat.io'].underline")).to_be_enabled()
-
 
 def open_home_page(page: Page, configs: Config):
     page.goto(configs.base_url)
