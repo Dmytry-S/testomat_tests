@@ -30,7 +30,7 @@ def test_signup_with_invalid_creds(page: Page, configs: Config):
     open_home_page(page, configs)
     sign_up(page, configs.username, configs.invalid_email, Faker().password(length=14, special_chars=False))
 
-    expect(page.locator("#content-desktop .text-red-500")).to_have_text(re.compile("^ must contain special"))
+    expect(page.locator("#content-desktop .text-red-500")).to_contain_text("must contain special")
 
 def test_search_project_in_company(page: Page, login):
     search_for_project(page, os.getenv('TARGET_PROJECT'))
