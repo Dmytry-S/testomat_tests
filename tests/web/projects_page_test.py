@@ -7,7 +7,7 @@ from src.web.pages.ProjectsPage import ProjectsPage
 from tests.conftest import Config
 
 
-def test_search_project_in_company(page: Page, configs: Config):
+def test_search_elements_on_projects_page(page: Page, configs: Config):
     login_page = LoginPage(page)
     login_page.open()
     login_page.is_loaded()

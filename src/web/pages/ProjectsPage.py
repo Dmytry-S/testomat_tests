@@ -8,7 +8,7 @@ class ProjectsPage:
         self.page = page
 
     def is_loaded(self):
-        expect(self.page.locator("#content-desktop h2")).to_have_text("Projects")
+        expect(self.page.locator(".common-flash-success")).to_have_text("Signed in successfully")
 
     def search_project(self, target_project: str):
         self.page.locator("#content-desktop #search").fill(target_project)
