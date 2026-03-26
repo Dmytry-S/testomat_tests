@@ -7,11 +7,11 @@ from src.web.pages.ProjectsPage import ProjectsPage
 from tests.conftest import Config
 
 
-def test_search_elements_on_projects_page(page: Page, configs: Config):
-    login_page = LoginPage(page)
-    login_page.open()
-    login_page.is_loaded()
-    login_page.login(configs.email, configs.password)
+def test_search_elements_on_projects_page(page: Page, configs: Config, login):
+    # login_page = LoginPage(page)
+    # login_page.open()
+    # login_page.is_loaded()
+    # login_page.login(configs.email, configs.password)
 
     projects_page = ProjectsPage(page)
     projects_page.is_loaded()

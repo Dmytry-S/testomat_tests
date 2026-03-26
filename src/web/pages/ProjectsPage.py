@@ -16,7 +16,7 @@ class ProjectsPage:
     def search_project_in_company(self, target_project: str):
         self.search_project(target_project)
 
-        expect(self.page.get_by_role("heading", name=os.getenv('TARGET_PROJECT'))).to_be_visible()
+        expect(self.page.get_by_role("heading", name=target_project)).to_be_visible()
 
     def select_free_project(self):
         self.page.locator("#company_id").click()
