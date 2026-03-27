@@ -2,7 +2,6 @@ import os
 
 from playwright.sync_api import Page
 
-from src.web.pages.LoginPage import LoginPage
 from src.web.pages.ProjectsPage import ProjectsPage
 from tests.conftest import Config
 

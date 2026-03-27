@@ -18,5 +18,3 @@ class LoginPage:
 
     def invalid_login_page_visible(self):
         expect(self.page.locator("#content-desktop").get_by_text("Invalid Email or password.")).to_be_visible()
-
-

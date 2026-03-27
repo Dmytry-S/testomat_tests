@@ -23,5 +23,3 @@ class NewProjectsPage:
 
     def click_create(self):
         self.form_container.get_by_role("button", name="Create").click()
-
-

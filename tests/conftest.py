@@ -30,6 +30,7 @@ def configs():
         password=os.getenv('PASSWORD'),
     )
 
+
 @pytest.fixture(scope="function")
 def login(page: Page, configs: Config):
     login_page = LoginPage(page)
